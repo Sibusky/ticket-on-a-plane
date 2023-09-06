@@ -1,9 +1,8 @@
 import './styles.css';
 import { Button } from '../button';
 import { Input } from '../input';
-import { transfersMap } from './constants';
 
-export function Filter({ handleTransferFilter, selectedTransfers }) {
+export function Filter({ handleTransferFilter, selectedTransfers, transfersMap }) {
   return (
     <div className='filter'>
       <div className='filter__currency'>
@@ -19,7 +18,13 @@ export function Filter({ handleTransferFilter, selectedTransfers }) {
           <legend className='filter__transfers-title'>Количество пересадок</legend>
           <ul className='filter__transfers-list'>
             {Object.entries(transfersMap).map(([transfer, transferName]) => (
-              <Input key={transfer} transfer={transfer} name={transferName} handleTransferFilter={handleTransferFilter} selectedTransfers={selectedTransfers}/>
+              <Input
+                key={transfer}
+                transfer={transfer}
+                name={transferName}
+                handleTransferFilter={handleTransferFilter}
+                selectedTransfers={selectedTransfers}
+              />
             ))}
           </ul>
         </fieldset>

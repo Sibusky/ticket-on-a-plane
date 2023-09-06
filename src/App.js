@@ -3,6 +3,7 @@ import './App.css';
 import { Layout } from './components/layout';
 import { Main } from './pages/main';
 import db from './db/tickets.json';
+import { transfersMap } from './components/filter/constants';
 
 function App() {
   const [tickets, setTickets] = useState([]);
@@ -14,6 +15,12 @@ function App() {
 
   const handleTransferFilter = useCallback((transfer) => {
     setSelectedTransfers((prevSelectedTransfers) => {
+      if (!prevSelectedTransfers.includes('all') && transfer === 'all') {
+        return Object.keys(transfersMap);
+      }
+      if (prevSelectedTransfers.includes('all') && transfer === 'all') {
+        return [];
+      }
       if (prevSelectedTransfers.includes(transfer)) {
         return prevSelectedTransfers.filter((item) => item !== transfer);
       } else {
@@ -40,6 +47,7 @@ function App() {
         tickets={sortedTickets()}
         handleTransferFilter={handleTransferFilter}
         selectedTransfers={selectedTransfers}
+        transfersMap={transfersMap}
       />
     </Layout>
   );

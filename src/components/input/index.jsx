@@ -1,8 +1,12 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './styles.css';
 
 export function Input({ transfer, name, handleTransferFilter, selectedTransfers }) {
-  const [isChecked, setIsChecked] = useState(selectedTransfers.includes(transfer));
+  const [isChecked, setIsChecked] = useState(false);
+
+  useEffect(() => {
+    setIsChecked(selectedTransfers.includes(transfer));
+  }, [selectedTransfers, transfer]);
 
   function handleChange() {
     setIsChecked(!isChecked);
@@ -16,7 +20,8 @@ export function Input({ transfer, name, handleTransferFilter, selectedTransfers 
         type='checkbox'
         id={transfer}
         name={transfer}
-        value={isChecked}
+        value={transfer}
+        checked={isChecked}
         onChange={handleChange}
       />
       <label className='filter__transfers-input-label' htmlFor={transfer}>
