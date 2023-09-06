@@ -1,5 +1,11 @@
 .tickets {
-    width: calc(100% - 300px - 20px);
-    height: 500px;
-    border: 1px solid gray;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: calc(100% - 300px - 20px);
+  border: 1px solid gray;
 }
