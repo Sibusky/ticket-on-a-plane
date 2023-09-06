@@ -8,6 +8,7 @@ import { transfersMap } from './components/filter/constants';
 function App() {
   const [tickets, setTickets] = useState([]);
   const [selectedTransfers, setSelectedTransfers] = useState([]);
+  const [currency, setCurrency] = useState('rub');
 
   useEffect(() => {
     setTickets(db.tickets);
@@ -48,6 +49,10 @@ function App() {
       .sort((a, b) => a.price - b.price);
   }, [tickets, selectedTransfers]);
 
+  const handleCurrencyChange = useCallback((currency) => {
+    setCurrency(currency);
+  }, []);
+
   return (
     <Layout>
       <Main
@@ -56,6 +61,8 @@ function App() {
         selectedTransfers={selectedTransfers}
         transfersMap={transfersMap}
         handleButtonClick={handleOnlyButtonClick}
+        currency={currency}
+        handleCurrencyChange={handleCurrencyChange}
       />
     </Layout>
   );

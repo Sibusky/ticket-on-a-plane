@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './styles.css';
 
-export function Input({ transfer, name, handleTransferFilter, selectedTransfers, handleButtonClick }) {
+export function Checkbox({ transfer, name, handleTransferFilter, selectedTransfers, handleButtonClick }) {
   const [isChecked, setIsChecked] = useState(false);
 
   useEffect(() => {
@@ -32,7 +32,7 @@ export function Input({ transfer, name, handleTransferFilter, selectedTransfers,
       <label className='filter__transfers-input-label' htmlFor={transfer}>
         {name}
       </label>
-      {isChecked && transfer !== 'all' ? (
+      {isChecked && transfer !== 'all' && selectedTransfers.length !== 1 ? (
         <button className='filter__only-button' onClick={handleClick}>
           Только
         </button>

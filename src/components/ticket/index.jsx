@@ -2,6 +2,7 @@ import React from 'react';
 import './styles.css';
 import logo from '../../images/pngwing.com.png';
 import { Button } from '../button';
+import { convertPrice } from '../../utils/utils';
 
 export function Ticket({
   arrival_date,
@@ -15,12 +16,13 @@ export function Ticket({
   origin_name,
   price,
   stops,
+  currency,
 }) {
   return (
     <li className='tickets__item'>
       <div className='tickets__item-buy'>
         <img className='tickets__item-logo' alt={carrier} src={logo} />
-        <Button className='tickets__item-button'>Купить за {price} ₽</Button>
+        <Button className='tickets__item-button'>Купить за {convertPrice(price, currency)}</Button>
       </div>
       <div className='tickets__item-info'>
         <div className='tickets__item-time'>

@@ -3,13 +3,28 @@ import Container from '../components/container';
 import { Filter } from '../components/filter';
 import { Tickets } from '../components/tickets';
 
-export function Main({ tickets, handleTransferFilter, selectedTransfers, transfersMap, handleButtonClick }) {
+export function Main({
+  tickets,
+  handleTransferFilter,
+  selectedTransfers,
+  transfersMap,
+  handleButtonClick,
+  currency,
+  handleCurrencyChange,
+}) {
   return (
     <Container>
       <section className='content section'>
         <div className='content__container section__container'>
-          <Filter handleTransferFilter={handleTransferFilter} selectedTransfers={selectedTransfers} transfersMap={transfersMap} handleButtonClick={handleButtonClick}/>
-          <Tickets tickets={tickets}  />
+          <Filter
+            handleTransferFilter={handleTransferFilter}
+            selectedTransfers={selectedTransfers}
+            transfersMap={transfersMap}
+            handleButtonClick={handleButtonClick}
+            handleCurrencyChange={handleCurrencyChange}
+            currency={currency}
+          />
+          <Tickets tickets={tickets} currency={currency} />
         </div>
       </section>
     </Container>

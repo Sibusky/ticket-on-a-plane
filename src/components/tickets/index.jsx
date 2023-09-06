@@ -2,7 +2,7 @@ import React from 'react';
 import './styles.css';
 import { Ticket } from '../ticket';
 
-export function Tickets({ tickets }) {
+export function Tickets({ tickets, currency }) {
   return (
     <ul className='tickets'>
       {tickets.map((item) => (
@@ -19,6 +19,7 @@ export function Tickets({ tickets }) {
           origin_name={item.origin_name}
           price={item.price}
           stops={item.stops}
+          currency={currency}
         />
       ))}
     </ul>
