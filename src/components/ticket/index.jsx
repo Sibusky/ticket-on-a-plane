@@ -1,6 +1,5 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './styles.css';
-import logo from '../../images/pngwing.com.png';
 import { Button } from '../button';
 import { convertPrice } from '../../utils/utils';
 
@@ -18,10 +17,23 @@ export function Ticket({
   stops,
   currency,
 }) {
+
+    const [imageSrc, setImageSrc] = useState(null);
+
+    useEffect(() => {
+      import(`../../images/logos/${carrier.toLowerCase()}.png`)
+        .then((imageModule) => {
+          setImageSrc(imageModule.default);
+        })
+        .catch((error) => {
+          console.error('Error loading image:', error);
+        });
+    }, [carrier]);
+
   return (
     <li className='tickets__item'>
       <div className='tickets__item-buy'>
-        <img className='tickets__item-logo' alt={carrier} src={logo} />
+        <img className='tickets__item-logo' alt={carrier} src={imageSrc} />
         <Button className='tickets__item-button'>Купить за {convertPrice(price, currency)}</Button>
       </div>
       <div className='tickets__item-info'>

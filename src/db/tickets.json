@@ -262,7 +262,7 @@
       "departure_time": "16:40",
       "arrival_date": "18.05.18",
       "arrival_time": "18:20",
-      "carrier": "UA",
+      "carrier": "LH",
       "stops": 0,
       "price": 8500
     },
@@ -290,7 +290,7 @@
       "departure_time": "09:55",
       "arrival_date": "20.05.18",
       "arrival_time": "11:45",
-      "carrier": "CX",
+      "carrier": "TK",
       "stops": 0,
       "price": 11500
     },
@@ -346,7 +346,7 @@
       "departure_time": "13:45",
       "arrival_date": "24.05.18",
       "arrival_time": "16:00",
-      "carrier": "KE",
+      "carrier": "BA",
       "stops": 0,
       "price": 9800
     },
@@ -374,7 +374,7 @@
       "departure_time": "10:30",
       "arrival_date": "26.05.18",
       "arrival_time": "14:15",
-      "carrier": "QF",
+      "carrier": "BA",
       "stops": 0,
       "price": 11700
     },
@@ -388,7 +388,7 @@
       "departure_time": "16:10",
       "arrival_date": "27.05.18",
       "arrival_time": "18:00",
-      "carrier": "UA",
+      "carrier": "LH",
       "stops": 0,
       "price": 7600
     },
@@ -416,7 +416,7 @@
       "departure_time": "12:40",
       "arrival_date": "29.05.18",
       "arrival_time": "14:30",
-      "carrier": "CX",
+      "carrier": "TK",
       "stops": 0,
       "price": 8800
     },
@@ -444,7 +444,7 @@
       "departure_time": "08:00",
       "arrival_date": "31.05.18",
       "arrival_time": "11:15",
-      "carrier": "AA",
+      "carrier": "LH",
       "stops": 0,
       "price": 9800
     }
