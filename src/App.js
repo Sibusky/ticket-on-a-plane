@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import './App.css';
 import { Layout } from './components/layout';
 import { Main } from './pages/main';
@@ -11,9 +11,13 @@ function App() {
     setTickets(db.tickets);
   }, []);
 
+  const sortedTickets = useCallback(() => {
+    return tickets.sort((a, b) => a.price - b.price);
+  }, [tickets]);
+
   return (
     <Layout>
-      <Main tickets={tickets}/>
+      <Main tickets={sortedTickets()} />
     </Layout>
   );
 }

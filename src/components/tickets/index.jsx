@@ -7,6 +7,7 @@ export function Tickets({ tickets }) {
     <ul className='tickets'>
       {tickets.map((item) => (
         <Ticket
+          key={item.id}
           arrival_date={item.arrival_date}
           arrival_time={item.arrival_time}
           carrier={item.carrier}

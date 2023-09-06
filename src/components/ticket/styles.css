@@ -1,11 +1,65 @@
 .tickets__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  height: 250px;
+  margin-bottom: 50px;
+  border: 1px solid green;
+}
 
+.tickets__item:last-of-type {
+  margin-bottom: 0;
 }
 
 .tickets__item-buy {
-
 }
 
 .tickets__item-logo {
-    width: 100px;
+  width: 100px;
+}
+
+.tickets__item-button {
+}
+
+.tickets__item-info {
+}
+
+.tickets__item-time {
+}
+
+.tickets__item-time-departure {
+}
+
+.tickets__item-transfer {
+}
+
+.tickets__item-transfer-counter {
+}
+
+.tickets__item-transfer-image {
+}
+
+.tickets__item-time-arrival {
+}
+
+.tickets__item-cities {
+}
+
+.tickets__item-origin {
+}
+
+.tickets__item-origin-name {
+}
+
+.tickets__item-departure-date {
+}
+
+.tickets__item-destination {
+}
+
+.tickets__item-destination-name {
+}
+
+.tickets__item-arrival-date {
 }
