@@ -5,9 +5,9 @@ export const TWO_TRANSFERS = '2 пересадки';
 export const THREE_TRANSFERS = '3 пересадки';
 
 export const transfersMap = {
-  all: ALL,
-  none: NONE,
-  one: ONE_TRANSFER,
-  two: TWO_TRANSFERS,
-  three: THREE_TRANSFERS,
+//   all: ALL,
+  0: NONE,
+  1: ONE_TRANSFER,
+  2: TWO_TRANSFERS,
+  3: THREE_TRANSFERS,
 };
