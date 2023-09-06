@@ -1,0 +1,19 @@
+.filter__transfers-item {
+
+}
+
+.filter__transfers-item:hover .filter__only-button  {
+    display: inline-block;
+}
+
+.filter__transfers-input {
+
+}
+
+.filter__transfers-input-label {
+
+}
+
+.filter__only-button {
+    display: none;
+}

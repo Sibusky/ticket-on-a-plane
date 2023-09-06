@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './styles.css';
 
-export function Input({ transfer, name, handleTransferFilter, selectedTransfers }) {
+export function Input({ transfer, name, handleTransferFilter, selectedTransfers, handleButtonClick }) {
   const [isChecked, setIsChecked] = useState(false);
 
   useEffect(() => {
@@ -11,6 +11,11 @@ export function Input({ transfer, name, handleTransferFilter, selectedTransfers 
   function handleChange() {
     setIsChecked(!isChecked);
     handleTransferFilter(transfer);
+  }
+
+  function handleClick(e) {
+    e.preventDefault();
+    handleButtonClick(transfer);
   }
 
   return (
@@ -27,7 +32,11 @@ export function Input({ transfer, name, handleTransferFilter, selectedTransfers 
       <label className='filter__transfers-input-label' htmlFor={transfer}>
         {name}
       </label>
-      <button>Только</button>
+      {isChecked && transfer !== 'all' ? (
+        <button className='filter__only-button' onClick={handleClick}>
+          Только
+        </button>
+      ) : null}
     </li>
   );
 }

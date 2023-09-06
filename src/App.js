@@ -29,6 +29,13 @@ function App() {
     });
   }, []);
 
+  const handleOnlyButtonClick = useCallback(
+    (transfer) => {
+      setSelectedTransfers(selectedTransfers.filter((item) => item === transfer));
+    },
+    [selectedTransfers]
+  );
+
   const sortedTickets = useCallback(() => {
     return tickets
       .filter((ticket) => {
@@ -48,6 +55,7 @@ function App() {
         handleTransferFilter={handleTransferFilter}
         selectedTransfers={selectedTransfers}
         transfersMap={transfersMap}
+        handleButtonClick={handleOnlyButtonClick}
       />
     </Layout>
   );
