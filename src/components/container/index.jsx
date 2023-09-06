@@ -1,10 +1,10 @@
 import React from 'react'
 import './styles.css'
 
-export default function Container() {
+export default function Container({ children }) {
   return (
-    <main>
-        Content
+    <main className='main'>
+        {children}
     </main>
   )
 }

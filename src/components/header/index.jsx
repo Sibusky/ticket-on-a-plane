@@ -3,8 +3,10 @@ import './styles.css'
 
 export function Header() {
   return (
-    <header>
-        Header
+    <header className='header section'>
+        <div className='header__container section__container'>
+            Header
+        </div>
     </header>
   )
 }
