@@ -14,7 +14,7 @@ export function Radio({ currencyLabel, currentCurrency }) {
         value={currencyLabel}
       />
       <label className='filter__currency-label' htmlFor={currencyLabel}>
-        <p className={`filter__currency-text${isChecked ? '_checked' : ''} text`}>
+        <p className={`filter__currency-text ${isChecked ? 'filter__currency-text_checked' : ''} text`}>
           {currencyLabel.toUpperCase()}
         </p>
       </label>

@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import './styles.css';
-import { Button } from '../button';
 import { convertPrice, formatTransfers } from '../../utils/utils';
 
 export function Ticket({
@@ -33,30 +32,53 @@ export function Ticket({
   return (
     <li className='tickets__item'>
       <div className='tickets__item-buy'>
-        <img className='tickets__item-logo' alt={carrier} src={imageSrc} />
-        <Button className='tickets__item-button'>Купить за {convertPrice(price, currency)}</Button>
+        <div className='tickets__item-logo-wraper'>
+          <img className='tickets__item-logo' alt={carrier} src={imageSrc} />
+        </div>
+        <button className='tickets__item-button'>
+          <a
+            className='tickets__item-link text'
+            href='https://github.com/Sibusky'
+            target='_blank'
+            rel='noreferrer'
+          >
+            Купить
+            <br />
+            за {convertPrice(price, currency)}
+          </a>
+        </button>
       </div>
       <div className='tickets__item-info'>
         <div className='tickets__item-time'>
-          <p className='tickets__item-time-departure'>{departure_time}</p>
+          <p className='tickets__item-time-value text'>{departure_time}</p>
           <div className='tickets__item-transfer'>
-            <p className='tickets__item-transfer-counter'>{formatTransfers(stops)}</p>
-            <div className='tickets__item-transfer-image'></div>
+            <p className='tickets__item-transfer-counter text'>{formatTransfers(stops)}</p>
+            <div className='tickets__item-plane-wraper'>
+              <div className='tickets__item-line'></div>
+              <div className='tickets__item-plane'>
+                <svg xmlns='http://www.w3.org/2000/svg' width='313' height='305' viewBox='0 0 313 305'>
+                  <path
+                    fill='gray'
+                    d='m2,106h28l24,30h72l-44,-133h35l80,132h98c21,0 21,34 0,34l-98,0 -80,134h-35l43,-133h-71l-24,30h-28l15,-47'
+                  />
+                </svg>
+              </div>
+            </div>
           </div>
-          <p className='tickets__item-time-arrival'>{arrival_time}</p>
+          <p className='tickets__item-time-value text'>{arrival_time}</p>
         </div>
         <div className='tickets__item-cities'>
           <div className='tickets__item-origin'>
-            <p className='tickets__item-origin-name'>
+            <p className='tickets__item-airport-name text'>
               {origin}, {origin_name}
             </p>
-            <p className='tickets__item-departure-date'>{departure_date}</p>
+            <p className='tickets__item-date text'>{departure_date}</p>
           </div>
           <div className='tickets__item-destination'>
-            <p className='tickets__item-destination-name'>
+            <p className='tickets__item-airport-name text'>
               {destination_name}, {destination}
             </p>
-            <p className='tickets__item-arrival-date'>{arrival_date}</p>
+            <p className='tickets__item-date text'>{arrival_date}</p>
           </div>
         </div>
       </div>

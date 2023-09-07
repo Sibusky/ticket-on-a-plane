@@ -2,9 +2,12 @@
   /* Colors */
   --primary-background: #f3f7fa;
   --block-primary-background: #fff;
-  --light-gray: #D4D7D8;
-  --blue: #2196F3;
+  --light-gray: #d4d7d8;
+  --light-gray-text: #b5b5b5;
+  --light-orange: #ffebde;
+  --blue: #2196f3;
   --transparent-blue: rgba(33, 150, 243, 0.1);
+  --button-background: #ff6d00;
 
   /* Shadows */
   --primary-shadow: 0 0 7px rgba(0, 0, 0, 0.1);
@@ -55,7 +58,7 @@ body {
   line-height: normal;
   text-rendering: optimizeLegibility;
   text-decoration: none;
-  color: #4B4B4B;
+  color: #4b4b4b;
   letter-spacing: 0;
   margin: 0;
   padding: 0;
