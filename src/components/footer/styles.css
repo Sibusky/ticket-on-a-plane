@@ -1,0 +1,37 @@
+footer {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 50px;
+  background-color: var(--block-primary-background);
+}
+
+.footer_fetch {
+  background-color: transparent;
+}
+
+.footer__container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100%;
+}
+
+.footer__text {
+  margin-right: 10px;
+  color: var(--light-gray-text);
+}
+
+.footer__github-link {
+  cursor: pointer;
+}
+
+.footer__github-link > svg > path {
+  fill: var(--light-gray-text);
+  transition: fill 0.3s ease-in-out;
+}
+
+.footer__github-link:hover > svg > path {
+  fill: black;
+}

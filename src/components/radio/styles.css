@@ -1,0 +1,124 @@
+.filter__currency-item {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 34%;
+  margin-right: -1px;
+  border: 1px solid var(--light-gray);
+  cursor: pointer;
+  background-color: white;
+  transition: background-color 0.3s;
+}
+
+@media screen and (max-width: 600px) {
+  .filter__currency-item {
+    height: 40px;
+    width: 100%;
+    margin: 0 0 -1px 0;
+  }
+}
+
+.filter__currency-item:last-of-type {
+  margin-right: 0;
+  border-bottom-right-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+@media screen and (max-width: 600px) {
+  .filter__currency-item:last-of-type {
+    margin: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+  }
+}
+
+.filter__currency-item:last-of-type:before {
+  border-bottom-right-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+@media screen and (max-width: 600px) {
+  .filter__currency-item:last-of-type:before {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+  }
+}
+
+.filter__currency-item:first-of-type {
+  border-bottom-left-radius: 8px;
+  border-top-left-radius: 8px;
+}
+
+@media screen and (max-width: 600px) {
+  .filter__currency-item:first-of-type {
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+  }
+}
+
+.filter__currency-item:first-of-type:before {
+  border-bottom-left-radius: 8px;
+  border-top-left-radius: 8px;
+}
+
+@media screen and (max-width: 600px) {
+  .filter__currency-item:first-of-type:before {
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+  }
+}
+
+.filter__currency-item:before {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 100%;
+  border: 1px solid var(--blue);
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.filter__currency-item:hover {
+  background-color: var(--transparent-blue);
+}
+
+.filter__currency-item:hover:before {
+  opacity: 1;
+}
+
+.filter__currency-item_checked,
+.filter__currency-item_checked:hover {
+  background-color: var(--blue);
+  border: 1px solid var(--blue);
+}
+
+.filter__currency-input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.filter__currency-label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.filter__currency-text {
+  color: var(--blue);
+}
+
+.filter__currency-text_checked {
+  color: white;
+}
