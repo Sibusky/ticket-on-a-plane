@@ -29,11 +29,11 @@ export function Checkbox({ transfer, name, handleTransferFilter, selectedTransfe
         checked={isChecked}
         onChange={handleChange}
       />
-      <label className='filter__transfers-input-label' htmlFor={transfer}>
+      <label className='filter__transfers-input-label text' htmlFor={transfer}>
         {name}
       </label>
       {isChecked && transfer !== 'all' && selectedTransfers.length !== 1 ? (
-        <button className='filter__only-button' onClick={handleClick}>
+        <button className='filter__only-button text' onClick={handleClick}>
           Только
         </button>
       ) : null}

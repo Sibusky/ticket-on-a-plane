@@ -1,10 +1,21 @@
 :root {
   /* Colors */
   --primary-background: #f3f7fa;
+  --block-primary-background: #fff;
+  --light-gray: #D4D7D8;
+  --blue: #2196F3;
+  --transparent-blue: rgba(33, 150, 243, 0.1);
+
+  /* Shadows */
+  --primary-shadow: 0 0 7px rgba(0, 0, 0, 0.1);
 }
 
 * {
   box-sizing: border-box;
+}
+
+body {
+  background-color: var(--primary-background);
 }
 
 .section {
@@ -22,13 +33,37 @@
   width: 1100px;
 }
 
-/* .content__container {
-} */
+@media screen and (max-width: 1250px) {
+  .section__container {
+    width: 85%;
+  }
+}
+
+.content {
+  padding: 60px 0 30px 0;
+}
+
+.content__container {
+  padding: 30px 0;
+}
+
+.text {
+  font-family: 'Roboto', Arial, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: normal;
+  text-rendering: optimizeLegibility;
+  text-decoration: none;
+  color: #4B4B4B;
+  letter-spacing: 0;
+  margin: 0;
+  padding: 0;
+}
 
 /* Потом удалить */
 
-.header__container,
-.footer__container {
-  height: 100px;
+.header,
+.footer {
   border: 1px solid gray;
 }

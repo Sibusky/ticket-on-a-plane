@@ -4,4 +4,7 @@ footer {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+  height: 30px;
+  position: fixed;
+  bottom: 0;
 }

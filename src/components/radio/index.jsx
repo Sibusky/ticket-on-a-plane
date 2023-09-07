@@ -5,7 +5,7 @@ export function Radio({ currencyLabel, currentCurrency }) {
   const isChecked = currencyLabel === currentCurrency;
 
   return (
-    <li className='filter__currency-item'>
+    <li className={`filter__currency-item ${isChecked ? 'filter__currency-item_checked' : ''}`}>
       <input
         className='filter__currency-input'
         type='radio'
@@ -14,7 +14,9 @@ export function Radio({ currencyLabel, currentCurrency }) {
         value={currencyLabel}
       />
       <label className='filter__currency-label' htmlFor={currencyLabel}>
-        <p className={`filter__currency-text${isChecked ? '_checked' : ''}`}>{currencyLabel.toUpperCase()}</p>
+        <p className={`filter__currency-text${isChecked ? '_checked' : ''} text`}>
+          {currencyLabel.toUpperCase()}
+        </p>
       </label>
     </li>
   );

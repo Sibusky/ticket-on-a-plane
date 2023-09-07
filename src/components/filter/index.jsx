@@ -19,8 +19,8 @@ export function Filter({
   return (
     <div className='filter'>
       <form className='filter__currency' onChange={(e) => handleCurrencyChange(e.target.value)}>
-        <p className='filter__currency-title'>Валюта</p>
-        <ul>
+        <p className='filter__currency-title text'>Валюта</p>
+        <ul className='filter__currency-list'>
           {Object.values(currencyMap).map((item) => (
             <Radio key={item} currencyLabel={item} currentCurrency={currency} />
           ))}
@@ -28,7 +28,7 @@ export function Filter({
       </form>
       <form className='filter__transfers'>
         <fieldset className='filter__transfers-fieldset'>
-          <legend className='filter__transfers-title'>Количество пересадок</legend>
+          <legend className='filter__transfers-title text'>Количество пересадок</legend>
           <ul className='filter__transfers-list'>
             {transformedTransferMap.map(([transfer, transferName]) => (
               <Checkbox
