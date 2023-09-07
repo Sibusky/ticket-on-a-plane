@@ -4,7 +4,6 @@ import { Ticket } from '../ticket';
 import { Spinner } from '../spinner';
 
 export function Tickets({ tickets, currency, isFetching }) {
-  console.log(isFetching);
   return (
     <ul className='tickets'>
       {isFetching ? (

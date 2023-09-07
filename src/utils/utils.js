@@ -14,3 +14,15 @@ export function convertPrice(price, currency) {
     return formattedPrice((price / 110).toFixed(2)) + ' €';
   }
 }
+
+export function formatTransfers(transfer) {
+  if (transfer === 0) {
+    return 'Без пересадок';
+  }
+  if (transfer === 1) {
+    return `${transfer} пересадка`;
+  }
+  if (transfer > 1) {
+    return `${transfer} пересадки`;
+  }
+}

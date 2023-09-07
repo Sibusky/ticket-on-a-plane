@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './styles.css';
 import { Button } from '../button';
-import { convertPrice } from '../../utils/utils';
+import { convertPrice, formatTransfers } from '../../utils/utils';
 
 export function Ticket({
   arrival_date,
@@ -40,7 +40,7 @@ export function Ticket({
         <div className='tickets__item-time'>
           <p className='tickets__item-time-departure'>{departure_time}</p>
           <div className='tickets__item-transfer'>
-            <p className='tickets__item-transfer-counter'>{stops} пересадок</p>
+            <p className='tickets__item-transfer-counter'>{formatTransfers(stops)}</p>
             <div className='tickets__item-transfer-image'></div>
           </div>
           <p className='tickets__item-time-arrival'>{arrival_time}</p>
