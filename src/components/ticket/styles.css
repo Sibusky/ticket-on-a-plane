@@ -10,6 +10,12 @@
   border-radius: 8px;
 }
 
+@media screen and (max-width: 450px) {
+  .tickets__item {
+    height: 190px;
+  }
+}
+
 .tickets__item:last-of-type {
   margin-bottom: 0;
 }
@@ -30,6 +36,18 @@
     width: 35%;
   }
 }
+
+@media screen and (max-width: 650px) {
+  .tickets__item-buy {
+    padding: 20px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+    .tickets__item-buy {
+      padding: 30px 10px;
+    }
+  }
 
 .tickets__item-logo-wraper {
   display: flex;
@@ -66,6 +84,12 @@
   transition: opacity 0.3s ease-in-out;
 }
 
+@media screen and (max-width: 550px) {
+  .tickets__item-button {
+    height: 60px;
+  }
+}
+
 .tickets__item-button:hover {
   opacity: 0.8;
 }
@@ -81,6 +105,26 @@
   letter-spacing: 0;
   color: var(--light-orange);
 }
+
+@media screen and (max-width: 600px) {
+  .tickets__item-link {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .tickets__item-link {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+    .tickets__item-link {
+      font-size: 12px;
+      line-height: 18px;
+    }
+  }
 
 .tickets__item-info {
   width: calc(100% - 260px);
@@ -99,6 +143,12 @@
   }
 }
 
+@media screen and (max-width: 600px) {
+  .tickets__item-info {
+    padding: 20px;
+  }
+}
+
 .tickets__item-time {
   display: flex;
   justify-content: space-between;
@@ -106,8 +156,32 @@
   margin-bottom: 15px;
 }
 
+@media screen and (max-width: 450px) {
+  .tickets__item-time {
+    margin-bottom: 8px;
+  }
+}
+
 .tickets__item-time-value {
   font-size: 40px;
+}
+
+@media screen and (max-width: 550px) {
+  .tickets__item-time-value {
+    font-size: 35px;
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .tickets__item-time-value {
+    font-size: 30px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .tickets__item-time-value {
+    font-size: 25px;
+  }
 }
 
 .tickets__item-transfer {
@@ -116,6 +190,12 @@
   justify-content: flex-start;
   align-items: center;
   width: calc(100% - 200px - 20px);
+}
+
+@media screen and (max-width: 600px) {
+  .tickets__item-transfer {
+    display: none;
+  }
 }
 
 .tickets__item-transfer-counter {
@@ -171,11 +251,28 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
+  width: 40%;
 }
 
 .tickets__item-airport-name {
   font-size: 18px;
   font-weight: 500;
+}
+
+@media screen and (max-width: 550px) {
+  .tickets__item-airport-name {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .tickets__item-airport-name {
+    font-size: 14px;
+  }
+}
+
+.tickets__item-airport-name-destination {
+  text-align: right;
 }
 
 .tickets__item-date {
@@ -188,4 +285,22 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-end;
+  width: 40%;
+}
+
+.tickets__item-stops-wraper {
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 600px) {
+  .tickets__item-stops-wraper {
+    display: flex;
+  }
+}
+
+.tickets__item-stops {
+  margin-right: 10px;
+  color: var(--light-gray-text);
 }
