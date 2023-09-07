@@ -17,18 +17,18 @@ export function Ticket({
   stops,
   currency,
 }) {
+  const [imageSrc, setImageSrc] = useState(null);
 
-    const [imageSrc, setImageSrc] = useState(null);
-
-    useEffect(() => {
-      import(`../../images/logos/${carrier.toLowerCase()}.png`)
-        .then((imageModule) => {
-          setImageSrc(imageModule.default);
-        })
-        .catch((error) => {
-          console.error('Error loading image:', error);
-        });
-    }, [carrier]);
+  // Use dynamic image upload
+  useEffect(() => {
+    import(`../../images/logos/${carrier.toLowerCase()}.png`)
+      .then((imageModule) => {
+        setImageSrc(imageModule.default);
+      })
+      .catch((error) => {
+        console.error('Error loading image:', error);
+      });
+  }, [carrier]);
 
   return (
     <li className='tickets__item'>

@@ -11,6 +11,7 @@ export function Main({
   handleButtonClick,
   currency,
   handleCurrencyChange,
+  isFetching,
 }) {
   return (
     <Container>
@@ -24,7 +25,7 @@ export function Main({
             handleCurrencyChange={handleCurrencyChange}
             currency={currency}
           />
-          <Tickets tickets={tickets} currency={currency} />
+          <Tickets tickets={tickets} currency={currency} isFetching={isFetching} />
         </div>
       </section>
     </Container>

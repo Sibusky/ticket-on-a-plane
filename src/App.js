@@ -9,9 +9,15 @@ function App() {
   const [tickets, setTickets] = useState([]);
   const [selectedTransfers, setSelectedTransfers] = useState([]);
   const [currency, setCurrency] = useState('rub');
+  const [isFetching, setIsFetching] = useState(false);
 
   useEffect(() => {
-    setTickets(db.tickets);
+    // Imitate fetching time to show loader
+    setIsFetching(true);
+    setTimeout(() => {
+      setTickets(db.tickets);
+      setIsFetching(false);
+    }, 2000);
   }, []);
 
   const handleTransferFilter = useCallback((transfer) => {
@@ -63,6 +69,7 @@ function App() {
         handleButtonClick={handleOnlyButtonClick}
         currency={currency}
         handleCurrencyChange={handleCurrencyChange}
+        isFetching={isFetching}
       />
     </Layout>
   );
