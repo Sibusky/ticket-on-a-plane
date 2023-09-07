@@ -7,6 +7,12 @@
   padding: 0 20px;
 }
 
+@media screen and (max-width: 1000px) {
+  .filter__transfers-item {
+    height: 30px;
+  }
+}
+
 .filter__transfers-item:hover {
   background-color: var(--transparent-blue);
 }
@@ -93,4 +99,10 @@
   text-align: right;
   display: none;
   cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+  .filter__only-button {
+    font-size: 12px;
+  }
 }

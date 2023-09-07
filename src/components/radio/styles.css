@@ -12,10 +12,27 @@
   transition: background-color 0.3s;
 }
 
+@media screen and (max-width: 600px) {
+  .filter__currency-item {
+    height: 40px;
+    width: 100%;
+    margin: 0 0 -1px 0;
+  }
+}
+
 .filter__currency-item:last-of-type {
   margin-right: 0;
   border-bottom-right-radius: 8px;
   border-top-right-radius: 8px;
+}
+
+@media screen and (max-width: 600px) {
+  .filter__currency-item:last-of-type {
+    margin: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+  }
 }
 
 .filter__currency-item:last-of-type:before {
@@ -23,14 +40,38 @@
   border-top-right-radius: 8px;
 }
 
+@media screen and (max-width: 600px) {
+  .filter__currency-item:last-of-type:before {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+  }
+}
+
 .filter__currency-item:first-of-type {
   border-bottom-left-radius: 8px;
   border-top-left-radius: 8px;
 }
 
+@media screen and (max-width: 600px) {
+  .filter__currency-item:first-of-type {
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+  }
+}
+
 .filter__currency-item:first-of-type:before {
   border-bottom-left-radius: 8px;
   border-top-left-radius: 8px;
+}
+
+@media screen and (max-width: 600px) {
+  .filter__currency-item:first-of-type:before {
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+  }
 }
 
 .filter__currency-item:before {
@@ -42,7 +83,6 @@
   z-index: 1;
   opacity: 0;
   transition: opacity 0.3s;
-  /* background: transparent; */
 }
 
 .filter__currency-item:hover {

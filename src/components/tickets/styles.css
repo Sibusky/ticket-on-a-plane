@@ -1,5 +1,5 @@
 .tickets {
-    position: relative;
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -8,4 +8,16 @@
   margin: 0;
   padding: 0;
   width: calc(100% - 300px - 20px);
+}
+
+@media screen and (max-width: 1150px) {
+  .tickets {
+    width: 68%;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .tickets {
+    width: 98%;
+  }
 }

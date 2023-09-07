@@ -25,12 +25,24 @@
   border-right: 1px solid var(--light-gray);
 }
 
+@media screen and (max-width: 1150px) {
+  .tickets__item-buy {
+    width: 35%;
+  }
+}
+
 .tickets__item-logo-wraper {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 160px;
   height: 60px;
+}
+
+@media screen and (max-width: 1150px) {
+  .tickets__item-logo-wraper {
+    width: 90%;
+  }
 }
 
 .tickets__item-logo {
@@ -75,6 +87,18 @@
   padding: 35px;
 }
 
+@media screen and (max-width: 1150px) {
+  .tickets__item-info {
+    width: 65%;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .tickets__item-info {
+    padding: 35px 20px;
+  }
+}
+
 .tickets__item-time {
   display: flex;
   justify-content: space-between;
@@ -98,7 +122,14 @@
   font-size: 12px;
   font-weight: 500;
   text-transform: uppercase;
+  text-align: center;
   color: var(--light-gray-text);
+}
+
+@media screen and (max-width: 650px) {
+  .tickets__item-transfer-counter {
+    font-size: 10px;
+  }
 }
 
 .tickets__item-plane-wraper {
