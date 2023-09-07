@@ -1,20 +1,11 @@
-.spinner-wraper {
-  background-color: rgba(255, 255, 255, 0.7);
-  width: 100vw;
-  height: 100vh;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
 .spinner {
   display: block;
   position: absolute;
   width: 80px;
   height: 80px;
   margin: auto;
-  top: calc(50% - 40px);
-  left: calc(50% - 40px);
+  top: 100px;
+  left: 50%;
 }
 .spinner div {
   position: absolute;
