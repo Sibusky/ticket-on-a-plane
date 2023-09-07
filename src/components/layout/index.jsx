@@ -3,12 +3,12 @@ import './styles.css'
 import { Header } from '../header';
 import { Footer } from '../footer';
 
-export function Layout({ children }) {
+export function Layout({ children, isFetching }) {
   return (
     <div className='layout'>
       <Header />
       {children}
-      <Footer />
+      <Footer isFetching={isFetching} />
     </div>
   );
 }

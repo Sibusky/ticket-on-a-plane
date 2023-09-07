@@ -60,7 +60,7 @@ function App() {
   }, []);
 
   return (
-    <Layout>
+    <Layout isFetching={isFetching}>
       <Main
         tickets={sortedTickets()}
         handleTransferFilter={handleTransferFilter}
