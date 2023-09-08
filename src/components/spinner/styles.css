@@ -5,7 +5,7 @@
   height: 80px;
   margin: auto;
   top: 100px;
-  left: 50%;
+  left: calc(50% - 40px);
 }
 .spinner div {
   position: absolute;
