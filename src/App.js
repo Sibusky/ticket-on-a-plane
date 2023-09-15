@@ -46,7 +46,7 @@ function App() {
   const sortedTickets = useCallback(() => {
     return tickets
       .filter((ticket) => {
-        if (selectedTransfers.length === 0) {
+        if (selectedTransfers.length === 0 || selectedTransfers.includes('all')) {
           return true; // Show all tickets if no transfers are selected
         } else {
           return selectedTransfers.includes(ticket.stops.toString());
